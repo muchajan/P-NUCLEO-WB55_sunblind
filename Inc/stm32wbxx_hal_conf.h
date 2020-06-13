@@ -37,25 +37,26 @@
 /*#define HAL_CRYP_MODULE_ENABLED   */
 /*#define HAL_COMP_MODULE_ENABLED   */
 /*#define HAL_CRC_MODULE_ENABLED   */
-/*#define HAL_HSEM_MODULE_ENABLED   */
+#define HAL_HSEM_MODULE_ENABLED
 /*#define HAL_I2C_MODULE_ENABLED   */
-/*#define HAL_IPCC_MODULE_ENABLED   */
+/*#define HAL_I2S_MODULE_ENABLED   */
+#define HAL_IPCC_MODULE_ENABLED
 /*#define HAL_IRDA_MODULE_ENABLED   */
 /*#define HAL_IWDG_MODULE_ENABLED   */
 /*#define HAL_LCD_MODULE_ENABLED   */
 #define HAL_LPTIM_MODULE_ENABLED
-#define HAL_PCD_MODULE_ENABLED
+/*#define HAL_PCD_MODULE_ENABLED   */
 /*#define HAL_PKA_MODULE_ENABLED   */
 /*#define HAL_QSPI_MODULE_ENABLED   */
 /*#define HAL_RNG_MODULE_ENABLED   */
-/*#define HAL_RTC_MODULE_ENABLED   */
+#define HAL_RTC_MODULE_ENABLED
 /*#define HAL_SAI_MODULE_ENABLED   */
 /*#define HAL_SMBUS_MODULE_ENABLED   */
 /*#define HAL_SMARTCARD_MODULE_ENABLED   */
 /*#define HAL_SPI_MODULE_ENABLED   */
 /*#define HAL_TIM_MODULE_ENABLED   */
 /*#define HAL_TSC_MODULE_ENABLED   */
-/*#define HAL_UART_MODULE_ENABLED   */
+#define HAL_UART_MODULE_ENABLED
 /*#define HAL_USART_MODULE_ENABLED   */
 /*#define HAL_WWDG_MODULE_ENABLED   */
 #define HAL_EXTI_MODULE_ENABLED
@@ -70,6 +71,7 @@
 #define USE_HAL_COMP_REGISTER_CALLBACKS      0u
 #define USE_HAL_CRYP_REGISTER_CALLBACKS      0u
 #define USE_HAL_I2C_REGISTER_CALLBACKS       0u
+#define USE_HAL_I2S_REGISTER_CALLBACKS       0u
 #define USE_HAL_IRDA_REGISTER_CALLBACKS      0u
 #define USE_HAL_LPTIM_REGISTER_CALLBACKS     0u
 #define USE_HAL_PCD_REGISTER_CALLBACKS       0u
@@ -184,7 +186,7 @@
   * @brief Uncomment the line below to expanse the "assert_param" macro in the
   *        HAL drivers code
   */
- #define USE_FULL_ASSERT    1U 
+/* #define USE_FULL_ASSERT    1U */
 
 /* ################## SPI peripheral configuration ########################## */
 
@@ -242,6 +244,10 @@
 #ifdef HAL_I2C_MODULE_ENABLED
  #include "stm32wbxx_hal_i2c.h"
 #endif /* HAL_I2C_MODULE_ENABLED */
+
+#ifdef HAL_I2S_MODULE_ENABLED
+ #include "stm32wbxx_hal_i2s.h"
+#endif /* HAL_I2S_MODULE_ENABLED */
 
 #ifdef HAL_IPCC_MODULE_ENABLED
  #include "stm32wbxx_hal_ipcc.h"

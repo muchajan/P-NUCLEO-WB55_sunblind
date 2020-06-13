@@ -7,6 +7,7 @@
 
 #include "sunblind.h"
 #include "../drv8838/drv8388.h"
+#include "../encoder/encoder.h"
 #include "stm32wbxx.h"
 
 //static DRV8838_DIR eDir = DRV8838_DIR_CW;
@@ -18,6 +19,7 @@ static uint32_t eRange = 0;
 void
 Sunblind_Init ()
 {
+  Encoder_Init();
   Drv8838_Init ();
 }
 

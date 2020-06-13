@@ -19,6 +19,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "tim.h"
+#include "stm32wbxx_ll_tim.h"
+#include "stm32wbxx_ll_gpio.h"
 
 /* USER CODE BEGIN 0 */
 
